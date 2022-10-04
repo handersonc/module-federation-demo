@@ -38,16 +38,7 @@ module.exports = merge(common, {
       standalone: false, // false uses chrome extention
     }),
     new HtmlWebpackPlugin({
-      template: './views/index.html',
-      templateParameters: {
-        INITIAL_DATA: JSON.stringify({
-          bearerToken: ''
-        }),
-        'window.__INITIAL__DATA__': JSON.stringify({
-          bearerToken: ''
-        }),
-        distSrc: DEFAULT_DIST_SRC
-      }
+      template: './src/index.html',
     }),
     new webpack.DefinePlugin({
       'window.__INITIAL__DATA__': JSON.stringify({

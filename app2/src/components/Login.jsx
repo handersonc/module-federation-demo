@@ -14,7 +14,7 @@ import styled from '@emotion/styled'
 
 import logo from 'assets/veritext_logo_reverse.png'
 
-import useAuthentication from 'hooks/useAuthentication'
+import useAuthentication from 'hooks/use-authentication'
 import useSnackbar from 'hooks/useSnackbar'
 
 const Login = ({ callback }) => {

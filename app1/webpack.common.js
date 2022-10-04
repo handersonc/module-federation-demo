@@ -2,6 +2,8 @@ const ConfigWebpackPlugin = require('config-webpack')
 const { ModuleFederationPlugin } = require('webpack').container;
 const path = require('path')
 const webpack = require('webpack')
+const CopyPlugin = require('copy-webpack-plugin');
+
 const toModulePath = (...parts) => path.resolve(__dirname, 'src', ...parts)
 
 const MODULE_RESOLVE = {
@@ -57,6 +59,11 @@ module.exports = {
       APP_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
       APP_NAME: JSON.stringify(process.env.npm_package_name),
       APP_VERSION: JSON.stringify(process.env.npm_package_version)
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/assets', to: 'assets' },
+      ],
     }),
     new ModuleFederationPlugin({
       name: "app1",

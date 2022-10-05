@@ -69,14 +69,14 @@ const rules = [
   }
 ];
 
-const mfrConfig = {
-  name: 'host',
+const mfrConfig =  {
+  name: 'reports',
   exposes: {
-    './useAuthentication': './src/hooks/use-authentication'
+    './demo': './src/components/demo/demo'
   },
   filename: 'remoteEntry.js',
   remotes: {
-    reports: 'reports@http://localhost:4001/remoteEntry.js',
+    host: 'host@http://localhost:4000/remoteEntry.js',
   },
   shared: {
     ...deps,
@@ -122,7 +122,7 @@ module.exports = {
         { from: 'src/assets', to: 'assets' },
       ],
     }),
-    new ModuleFederationPlugin(mfrConfig),
+    new ModuleFederationPlugin(mfrConfig)
   ],
   target: 'web'
 }

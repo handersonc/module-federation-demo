@@ -14,8 +14,7 @@
     "lint": "eslint 'src/**/*.ts*(x)'",
     "lint:fix": "eslint --fix 'src/**/*.ts*(x)'",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "make-types": "make-federated-types"
+    "build-storybook": "build-storybook"
   },
   "keywords": [],
   "author": "",

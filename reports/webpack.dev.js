@@ -12,17 +12,12 @@ const port = 4001;
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
-  output: {
-    globalObject: 'this',
-    publicPath: 'http://localhost:4001/',
-  },
   devServer: {
     static: path.join(__dirname, 'dist'),
-    historyApiFallback: {
-      index: 'index.html',
-    },
     port,
     compress: true,
+    https: false,
+    historyApiFallback: true,
     open: true,
     headers: {
       'Access-Control-Allow-Origin': '*',
@@ -30,7 +25,6 @@ module.exports = merge(common, {
       'Access-Control-Allow-Headers':
         'X-Requested-With, content-type, Authorization',
     },
-    // hot: true,
   },
   plugins: [
     new MFLiveReloadPlugin({

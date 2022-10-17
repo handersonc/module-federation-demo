@@ -6,20 +6,17 @@ const common = require('./webpack.common.js');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const { MFLiveReloadPlugin } = require('@module-federation/fmr');
 
+const port = 4000;
 
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
-  output: {
-    globalObject: 'this',
-    publicPath: 'http://localhost:4000/',
-  },
   devServer: {
     static: path.join(__dirname, 'dist'),
     historyApiFallback: {
       index: 'index.html',
     },
-    port: 4000,
+    port,
     compress: true,
     open: true,
     headers: {
@@ -32,7 +29,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new MFLiveReloadPlugin({
-      port: 4000, // the port your app runs on
+      port, // the port your app runs on
       container: 'host', // the name of your app, must be unique
       standalone: false, // false uses chrome extention
     }),

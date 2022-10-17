@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import useAuthentication from 'hooks/use-authentication';
-
 import SumadiLogo from 'assets/images/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SidebarProps, { MenuItem, SidebarItemProps } from './prop-types';
-import Button from 'components/button/button';
 import useSidebar from './use-sidebar';
 
 const ExamsSideBar = ({ items, subTitle }: SidebarProps) => {

@@ -89,7 +89,7 @@ const mfrConfig = {
       singleton: true,
       eager: true,
       requiredVersion: deps['react-dom'],
-    },
+    }
   },
 };
 
@@ -108,7 +108,8 @@ module.exports = {
     filename: '[name].[hash:8].js',
     sourceMapFilename: '[name].[hash:8].map',
     chunkFilename: '[id].[hash:8].js',
-    publicPath: '/'
+    publicPath: 'auto',
+    clean: true,
   },
   plugins: [
     new Dotenv(),

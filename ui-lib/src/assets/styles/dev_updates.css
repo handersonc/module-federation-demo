@@ -1,0 +1,17 @@
+.block--loader {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.rnc__notification-item {
+    display: block;
+}
+
+.sumadi select {
+    color: var(--gray_dark);
+}
+
+.sumadi .container--audio-recording > svg {
+    color: var(--color-primary);
+    font-size: var(--spacer-2xl);
+}

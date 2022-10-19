@@ -1,14 +1,7 @@
 {
   "sourceType": "unambiguous",
   "presets": [
-      [
-          "@babel/preset-env",
-          {
-              "targets": {
-                  "node": "current"
-              }
-          }
-      ],
+      "@babel/preset-env",
       "@emotion/babel-preset-css-prop",
       "@babel/preset-react",
       "@babel/preset-typescript"

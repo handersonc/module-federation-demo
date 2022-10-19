@@ -111,14 +111,15 @@
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
     "react-tooltip": "^4.2.21",
-    "ts-loader": "^9.3.1"
+    "ts-loader": "^9.3.1",
+    "alms-sumadi-ui-lib": "1.0.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "post-merge": "npm install"
-    }
-  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+},
   "lint-staged": {
     "src/**/*.+(ts|tsx)": [
       "npm run lint"

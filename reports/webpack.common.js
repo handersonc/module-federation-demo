@@ -29,7 +29,8 @@ const MODULE_RESOLVE = {
     mutations: toModulePath('mutations'),
     queries: toModulePath('queries'),
 
-    bootstrap: toModulePath('bootstrap.tsx')
+    bootstrap: toModulePath('bootstrap.tsx'),
+    // 'alms-sumadi-ui-lib': path.resolve(__dirname, '../ui-lib/dist')
   }
 }
 
@@ -41,8 +42,10 @@ const rules = [
   },
   {
     test: /\.(js|jsx)$/,
-    exclude: /node_modules/,
-    use: ['babel-loader'],
+    exclude: [
+      /node_modules/
+    ],
+    loader: 'babel-loader',
   },
   {
     test: /\.(css)$/,

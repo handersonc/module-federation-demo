@@ -1,8 +1,8 @@
 
 //.storybook/preview.js
-require('../src/assets/styles/bootstrap.css');
-require('../src/assets/styles/sumadi.css');
-require('../src/assets/styles/dev_updates.css');
+import('../src/assets/styles/bootstrap.css');
+import('../src/assets/styles/sumadi.css');
+import('../src/assets/styles/dev_updates.css');
 
 import React from 'react';
 import { ThemeProvider } from '@emotion/react'

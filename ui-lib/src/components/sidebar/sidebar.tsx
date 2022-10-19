@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import SumadiLogo from 'assets/images/logo.png';
@@ -8,9 +9,11 @@ import useSidebar from './use-sidebar';
 
 const SumaSideBar = ({ items, subTitle }: SidebarProps) => {
 
-  const { state: sidebarState, setSelectedItem } = useSidebar(items);
+  const { state: sidebarState } = useSidebar(items);
 
-  const [selectedMenu, setSelectedMenu] = useState<string>('home');
+  const [, setSelectedMenu] = useState<string>('home');
+
+  const location = useLocation();
 
   useEffect(() => {
     const path = location.pathname;
@@ -25,10 +28,6 @@ const SumaSideBar = ({ items, subTitle }: SidebarProps) => {
   //   const initials = name.split(' ').reduce((response, word) => response += word.slice(0, 1), '');
   //   return initials;
   // }
-
-  const getCurrentYear = (): number => {
-    return new Date().getFullYear();
-  }
 
   const SidebarItem = ({item}: SidebarItemProps) => {
     return (<li>

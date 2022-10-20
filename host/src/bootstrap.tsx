@@ -4,6 +4,8 @@ import 'assets/styles/dev_updates.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'assets/styles/sumadi-faculty.css'
 
+import React from 'react'
+
 import { createRoot } from 'react-dom/client'
 import { StrictMode } from 'react'
 

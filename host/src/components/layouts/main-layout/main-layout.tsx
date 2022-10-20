@@ -4,6 +4,7 @@ import { faHomeAlt, faFileLines } from '@fortawesome/free-solid-svg-icons'
 
 import Sidebar from 'components/sidebar/sidebar';
 import { MenuItem } from 'components/sidebar/prop-types';
+// import { Sidebar, MenuItem } from 'alms-sumadi-ui-lib';
 
 
 const MainLayout = ({ children }: { children: ReactElement }) => {
@@ -13,13 +14,15 @@ const MainLayout = ({ children }: { children: ReactElement }) => {
     title: 'Home',
     key: 'home',
     selected: false,
-    to: '/home'
+    to: '/',
+    isExternal: false
   },{
     icon: faFileLines,
     title: 'Reports',
     key: 'reports',
     selected: false,
-    to: '/reports/home'
+    to: '/reports',
+    isExternal: false
   }];
   return (
     <div className='sumadi'>

@@ -13,9 +13,7 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
     static: path.join(__dirname, 'dist'),
-    historyApiFallback: {
-      index: 'index.html',
-    },
+    historyApiFallback: true,
     port,
     compress: true,
     open: true,

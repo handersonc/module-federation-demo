@@ -1,12 +1,12 @@
 import React from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import HomePage from 'pages/home'
 
 const AppRouter = () => {
   return (
     <Routes>
-      <Route path='/' element={<Navigate to='/home' />} />
-      <Route path='/home' element={<HomePage />} />
+      <Route index element={<HomePage />} />
+      <Route path='/' element={<HomePage />} />
     </Routes>
   )
 };

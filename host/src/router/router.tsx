@@ -1,19 +1,22 @@
-import React from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import React, { Suspense } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import HomePage from 'pages/home'
 const ReportsApp = React.lazy(() => import('reports/app'))
 
 
 const AppRouter = () => {
   return (
-    <React.Suspense fallback="Loading">
-      <Routes>
-        <Route path='/' element={<Navigate to='/home' />} />
-        <Route path='/home' element={<HomePage />} />
-        <Route path='/reports/*' element={<ReportsApp />} />
-        <Route path='*' element={<Navigate to='/home' />} />
-      </Routes>
-    </React.Suspense>
+    <Routes>
+      <Route path='/' element={
+        <Suspense fallback="Loading">
+          <HomePage />
+        </Suspense>} />
+
+      <Route path='/reports/*' element={
+        <Suspense fallback={'Loading'}>
+          <ReportsApp />
+        </Suspense>} />
+    </Routes>
   )
 }
 

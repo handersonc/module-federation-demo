@@ -42,7 +42,7 @@ const rules = [
   {
     test: /\.(js|jsx)$/,
     exclude: /node_modules/,
-    use: ['babel-loader'],
+    use: 'babel-loader',
   },
   {
     test: /\.(css)$/,
@@ -89,6 +89,26 @@ const mfrConfig = {
       singleton: true,
       eager: true,
       requiredVersion: deps['react-dom'],
+    },
+    'react-router-dom': {
+      singleton: true,
+      eager: true,
+      requiredVersion: deps['react-dom'],
+    },
+    '@emotion/react': {
+      singleton: true,
+      eager: true,
+      requiredVersion: deps['@emotion/react'],
+    },
+    'react-router': {
+      singleton: true,
+      eager: true,
+      requiredVersion: deps['react-router'],
+    },
+    '@fortawesome/react-fontawesome': {
+      singleton: true,
+      eager: true,
+      requiredVersion: deps['@fortawesome/react-fontawesome'],
     }
   },
 };

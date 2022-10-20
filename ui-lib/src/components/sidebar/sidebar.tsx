@@ -1,33 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import SumadiLogo from 'assets/images/logo.png';
-import SidebarProps, { MenuItem, SidebarItemProps } from './prop-types';
-import useSidebar from './use-sidebar';
+import { MenuItem, SidebarItemProps, SidebarProps } from './prop-types';
 
-const SumaSideBar = ({ items, subTitle }: SidebarProps) => {
-
-  const { state: sidebarState } = useSidebar(items);
-
-  const [, setSelectedMenu] = useState<string>('home');
-
-  const location = useLocation();
-
-  useEffect(() => {
-    const path = location.pathname;
-
-    if (path.includes('reports')) {
-      setSelectedMenu('reports');
-    }
-
-  }, [location])
-
-  // const getInitials = (): string => {
-  //   const initials = name.split(' ').reduce((response, word) => response += word.slice(0, 1), '');
-  //   return initials;
-  // }
+const Sidebar = ({ items, subTitle }: SidebarProps) => {
 
   const SidebarItem = ({item}: SidebarItemProps) => {
     return (<li>
@@ -59,7 +37,7 @@ const SumaSideBar = ({ items, subTitle }: SidebarProps) => {
       <ul className='nav--sidebar'>
         <span className='subtitle'>{subTitle}</span>
         {
-          sidebarState.map(item => <SidebarItem key={item.key} item={item} onClick={handleOnClick} />)
+          items.map(item => <SidebarItem key={item.key} item={item} onClick={handleOnClick} />)
         }
 
         
@@ -92,4 +70,4 @@ const SumaSideBar = ({ items, subTitle }: SidebarProps) => {
   );
 };
 
-export default SumaSideBar;
+export default Sidebar;

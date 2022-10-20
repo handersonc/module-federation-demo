@@ -109,10 +109,10 @@
     "react-hook-form": "^7.33.1",
     "react-i18next": "^11.17.4",
     "react-notifications-component": "^4.0.1",
-    "react-router": "^6.2.1",
-    "react-router-dom": "^6.2.1",
+    
     "react-tooltip": "^4.2.21",
-    "ts-loader": "^9.3.1"
+    "ts-loader": "^9.3.1",
+    "alms-sumadi-ui-lib": "1.0.0"
   },
   "husky": {
     "hooks": {

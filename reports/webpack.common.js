@@ -30,7 +30,6 @@ const MODULE_RESOLVE = {
     queries: toModulePath('queries'),
 
     bootstrap: toModulePath('bootstrap.tsx'),
-    // 'alms-sumadi-ui-lib': path.resolve(__dirname, '../ui-lib/dist')
   }
 }
 
@@ -89,6 +88,16 @@ const mfrConfig =  {
       requiredVersion: deps.react 
     },
     'react-dom': {
+      singleton: true,
+      eager: true,
+      requiredVersion: deps['react-dom'],
+    },
+    'react-router': {
+      singleton: true,
+      eager: true,
+      requiredVersion: deps['react-router'],
+    },
+    'react-router-dom': {
       singleton: true,
       eager: true,
       requiredVersion: deps['react-dom'],

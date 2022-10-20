@@ -39,7 +39,7 @@ export default [{
     commonjs({}),
     resolve(),
     typescript({
-      tsconfig: './tsconfig.json',
+      tsconfig: './tsconfig.build.json',
       useTsconfigDeclarationDir: true, 
       declaration: true,
       declarationDir: 'dist',

@@ -11,12 +11,12 @@
 ## Spinning up the projects in localhost
   1. `cd ui-lib`
   2. `npm i`
-  3. `npm run build`
-  4. `npm link`
+  3. `npm run build` > will generate dist folder with the distribution files
+  4. `npm link` > needed for localhost development to reference the library in localhost
   5. `cd ..`
   6. `cd reports`
   7. `npm i`
-  8. `npm link alms-sumadi-ui-lib`
+  8. `npm link alms-sumadi-ui-lib` > needed for localhost development to reference the library in localhost
   9. `npm start` > will open the app reports microfrontend in localhost:4001 then you have to enter to the browser in localhost:4001/reports
     Note: commands from 1 to 9 should be executed in the same terminal
   10. `cd ..`

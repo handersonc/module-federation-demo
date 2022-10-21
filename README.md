@@ -22,5 +22,5 @@
   10. `cd ..`
   11. `cd host`
   12. `npm i`
-  13. `npm start` > will open the app host microfrontend in localhost:4000, then you have to enter to the browser in localhost:4001, in here you will see the sidebar with options to see reports microfrontend embebed with Module Federation in action.
+  13. `npm start` > will open the app host microfrontend in localhost:4000, then you have to enter to the browser in localhost:4000, in here you will see the sidebar with options to see reports microfrontend embebed with Module Federation in action.
 

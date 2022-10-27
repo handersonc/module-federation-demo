@@ -102,6 +102,11 @@ const mfrConfig =  {
       eager: true,
       requiredVersion: deps['react-dom'],
     },
+    '@fortawesome/fontawesome-svg-core': {
+      singleton: true,
+      eager: true,
+      requiredVersion: deps['@fortawesome/fontawesome-svg-core'],
+    }
   },
 };
 
